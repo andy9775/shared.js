@@ -1,0 +1,30 @@
+{
+  "name": "shared.js",
+  "version": "0.0.1",
+  "description": "A factory for a passive mediator design pattern in <25 lines of Javascript",
+  "author": "Andy Chrzaszcz",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andy9775/shared.js"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "javascript",
+    "react-native",
+    "mediator",
+    "singleton",
+    "design pattern",
+    "react native"
+  ],
+  "bugs": {
+    "url": "https://github.com/andy9775/shared.js/issues"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "jest-cli": "^0.7.1",
+    "babel-jest": "^6.0.1"
+  }
+}
