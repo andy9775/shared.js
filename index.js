@@ -7,18 +7,18 @@ module.exports = {
   _sharePool: {},
   getShare: function(id, property, initialValue) {
     var sharedInstance = {};
-    id = id || 'defaultId';
-    property = property || 'defaultProperty';
-    if (!this._sharePool.hasOwnProperty(id)) {
+    if (!this._sharePool.hasOwnProperty(id) && property !== undefined
+      && initialValue !== undefined) {
       sharedInstance[property] = initialValue;
       this._sharePool[id] = sharedInstance;
-      return sharedInstance;
+    } else if (!this._sharePool.hasOwnProperty(id)) {
+      this._sharePool[id] = sharedInstance;
     } else if (this._sharePool.hasOwnProperty(id) && initialValue !== undefined) {
       sharedInstance = this._sharePool[id];
       sharedInstance[property] = initialValue;
-      return sharedInstance;
     } else if (this._sharePool.hasOwnProperty(id) && initialValue === undefined) {
       return this._sharePool[id];
     }
+    return sharedInstance;
   }
 };

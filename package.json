@@ -1,6 +1,6 @@
 {
   "name": "shared.js",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A factory for a passive mediator design pattern in <25 lines of Javascript",
   "author": "Andy Chrzaszcz",
   "main": "index.js",
