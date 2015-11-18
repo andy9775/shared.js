@@ -1,5 +1,6 @@
-# shared.js
+# shared.js  [![Build Status](https://travis-ci.org/andy9775/shared.js.svg?branch=master)](https://travis-ci.org/andy9775/shared.js)
 A factory for a passive mediator design pattern in <25 lines of Javascript 
+
 
 ## Use case:
 The motivation of this project was to easily share state amongst React Native components allowing for lose coupling between them. This allows a component to update the state and the others to see the update, and is a light weight alternative to using an event emitter since it does not use callbacks. Rather it is up to the Observers to check the state changes. 
