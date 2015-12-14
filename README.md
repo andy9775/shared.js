@@ -1,5 +1,5 @@
 # shared.js  [![Build Status](https://travis-ci.org/andy9775/shared.js.svg?branch=master)](https://travis-ci.org/andy9775/shared.js)
-A factory for a passive mediator design pattern in <25 lines of Javascript 
+A factory for a passive mediator design pattern in <20 lines of Javascript 
 
 
 ## Use case:
@@ -67,7 +67,7 @@ console.log(button.press());// true
 
 ### Functions
  
-- **`getShare`** _(id, property, initialValue)_ - retrieve a shared state object as identified by the id argument. All arguments are optional and are set to a default value except for initialValue which is set to undefined. 
+- **`getShare`** _(id, property, initialValue)_ - retrieve a shared state object as identified by the id argument. All arguments are optional and if none are passed the function returns a default system-wide share object. The same system-wide object is returned when `getShare` is called without arguments. 
 
 ---
 **MIT Licenced**

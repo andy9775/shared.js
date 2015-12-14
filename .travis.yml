@@ -2,3 +2,5 @@ language: node_js
 node_js:
   - "4.1"
   - "4.0"
+notifications:
+  slack: andycio:P3PMhT7zTkWj2AEl7yyO8oaY

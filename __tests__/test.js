@@ -23,5 +23,11 @@ describe('Shared object test', function(){
     expect(first).toEqual(second);
   });
 
+  it('Should return a system wide object', function(){
+    var one = Shared.getShare();
+    var two = Shared.getShare();
+    expect(one).toEqual(two);
+  })
+
 
 });

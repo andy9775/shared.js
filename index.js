@@ -5,9 +5,12 @@
 
 module.exports = {
   _sharePool: {},
+  _systemInstance: {},
   getShare: function(id, property, initialValue) {
     var sharedInstance = {};
-    if (!this._sharePool.hasOwnProperty(id) && property !== undefined
+    if (id === undefined && property === undefined && initialValue === undefined){
+      return this._systemInstance;
+    } else if (!this._sharePool.hasOwnProperty(id) && property !== undefined
       && initialValue !== undefined) {
       sharedInstance[property] = initialValue;
       this._sharePool[id] = sharedInstance;
